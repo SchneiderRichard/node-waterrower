@@ -80,8 +80,8 @@ var getPort = function() {
       i++;
     });
     if (portname == "NULL") {
-      // In case it didn't match above, this still seems incorrect, but I
-      // assume it works for others.
+      // In case it didn't match above. This still seems incorrect as it just
+      // chooses the last port regardless, but this is what it did before...
       portname = ports[i-1].comName;
     }
   });
